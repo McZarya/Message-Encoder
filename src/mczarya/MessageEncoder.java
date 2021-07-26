@@ -111,10 +111,14 @@ public class MessageEncoder {
         System.out.println("encoding message..." + "\n");
         wait(2000);
 
+        System.out.println("+-------Encoded Message--------+");
+
+        System.out.print(" ");
         for (int i = 0; i < encodeProcess.length(); i++) {
             System.out.print(ch[i]);
         }
-        System.out.print("\n" + "\n" + "Your message has been encoded" + "\n");
+        System.out.print("\n" + "+------------------------------+");
+        System.out.print("\n" + "Your message has been encoded" + "\n");
 
         System.out.println("Options: " + "\n" + "1. Encode another message" + "\n" + "2. Decode a message" + "\n"
                 + "3. Exit Program");
@@ -152,7 +156,7 @@ public class MessageEncoder {
         }
         for (int j = 0; j < decodeProcess.length(); j++) { // Decodes the message (Temporary for testing till external
                                                            // sheet is made)
-            if (ch[j] == 'p') { // TODO: Reverse the letters
+            if (ch[j] == 'p') {
                 ch[j] = 'q';
             } else if (ch[j] == 'q') {
                 ch[j] = 'w';
@@ -210,10 +214,14 @@ public class MessageEncoder {
         System.out.println("decoding message..." + "\n");
         wait(2000);
 
+        System.out.println("+-------decoded Message--------+");
+
+        System.out.print(" ");
         for (int i = 0; i < decodeProcess.length(); i++) {
             System.out.print(ch[i]);
         }
-        System.out.print("\n" + "\n" + "Your message has been decoded");
+        System.out.print("\n" + "+------------------------------+");
+        System.out.print("\n" + "Your message has been decoded" + "\n");
 
         System.out.println("Options: " + "\n" + "1. Encode a message" + "\n" + "2. Decode another message" + "\n"
                 + "3. Exit Program");
