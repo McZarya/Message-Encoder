@@ -14,6 +14,7 @@ public class MessageEncoder {
         int mainIn;
 
         Scanner inData = new Scanner(System.in);
+
         System.out.println("=================================================" + "\n" + "MESSAGE ENCODER BY MCZARYA"
                 + "\n" + "=================================================" + "\n" + "What would you like todo:" + "\n"
                 + "1. Encode a message" + "\n" + "2. Decrypt a message" + "\n" + "3. Exit Program");
@@ -21,6 +22,7 @@ public class MessageEncoder {
 
         if (mainIn < 1 || mainIn > 3) { // error checking menu options
             System.out.println("Error! You entered an invalid option type.");
+
         }
 
         if (mainIn == 1) { // Encoded message option
@@ -28,6 +30,10 @@ public class MessageEncoder {
         }
         if (mainIn == 2) { // Decoded message option
             decode();
+        }
+        if (mainIn == 3) { // Exits program
+            System.out.println("Goodbye");
+            System.exit(0);
         }
     }
 
@@ -103,11 +109,30 @@ public class MessageEncoder {
         }
 
         System.out.println("encoding message..." + "\n");
+        wait(2000);
+
         for (int i = 0; i < encodeProcess.length(); i++) {
             System.out.print(ch[i]);
         }
-        System.out.print("\n" + "\n" + "Your message has been encoded");
+        System.out.print("\n" + "\n" + "Your message has been encoded" + "\n");
 
+        System.out.println("Options: " + "\n" + "1. Encode another message" + "\n" + "2. Decode a message" + "\n"
+                + "3. Exit Program");
+        int returnToMenu = enInData.nextInt();
+        if (returnToMenu < 1 || returnToMenu > 3) { // error checking menu options
+            System.out.println("Error! You entered an invalid option type.");
+
+        }
+        if (returnToMenu == 1) { // Restarts encode method
+            encode();
+        }
+        if (returnToMenu == 2) { // Starts decode method
+            decode();
+        }
+        if (returnToMenu == 3) { // Exits the program
+            System.out.println("Goodbye");
+            System.exit(0);
+        }
     }
 
     public static void decode() { // Decoded message processing
@@ -183,11 +208,39 @@ public class MessageEncoder {
         }
 
         System.out.println("decoding message..." + "\n");
+        wait(2000);
+
         for (int i = 0; i < decodeProcess.length(); i++) {
             System.out.print(ch[i]);
         }
         System.out.print("\n" + "\n" + "Your message has been decoded");
 
+        System.out.println("Options: " + "\n" + "1. Encode a message" + "\n" + "2. Decode another message" + "\n"
+                + "3. Exit Program");
+        int returnToMenu = deInData.nextInt();
+        if (returnToMenu < 1 || returnToMenu > 3) { // error checking menu options
+            System.out.println("Error! You entered an invalid option type.");
+
+        }
+        if (returnToMenu == 1) { // Starts encode method
+            encode();
+        }
+        if (returnToMenu == 2) { // Restarts decode method
+            decode();
+        }
+        if (returnToMenu == 3) { // Exits the program
+            System.out.println("Goodbye");
+            System.exit(0);
+        }
+
+    }
+
+    public static void wait(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
     }
 
 }
