@@ -1,5 +1,5 @@
 # Message-Encoder
-A java message encoder that will use a user supplied cypher to encrypt/decrypt message
+A java message encoder that will use a user supplied cypher to encode/decode a message
 <br />
 
 ---
