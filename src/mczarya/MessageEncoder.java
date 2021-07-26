@@ -127,66 +127,66 @@ public class MessageEncoder {
         }
         for (int j = 0; j < decodeProcess.length(); j++) { // Decodes the message (Temporary for testing till external
                                                            // sheet is made)
-            if (ch[j] == 'q') { // TODO: Reverse the letters
-                ch[j] = 'p';
-            } else if (ch[j] == 'w') {
+            if (ch[j] == 'p') { // TODO: Reverse the letters
                 ch[j] = 'q';
-            } else if (ch[j] == 'e') {
+            } else if (ch[j] == 'q') {
                 ch[j] = 'w';
-            } else if (ch[j] == 'r') {
+            } else if (ch[j] == 'w') {
                 ch[j] = 'e';
-            } else if (ch[j] == 't') {
+            } else if (ch[j] == 'e') {
                 ch[j] = 'r';
-            } else if (ch[j] == 'y') {
+            } else if (ch[j] == 'r') {
                 ch[j] = 't';
-            } else if (ch[j] == 'u') {
+            } else if (ch[j] == 't') {
                 ch[j] = 'y';
-            } else if (ch[j] == 'i') {
+            } else if (ch[j] == 'y') {
                 ch[j] = 'u';
-            } else if (ch[j] == 'o') {
+            } else if (ch[j] == 'u') {
                 ch[j] = 'i';
-            } else if (ch[j] == 'p') {
+            } else if (ch[j] == 'i') {
                 ch[j] = 'o';
-            } else if (ch[j] == 'a') {
-                ch[j] = 'l';
-            } else if (ch[j] == 's') {
-                ch[j] = 'a';
-            } else if (ch[j] == 'd') {
-                ch[j] = 's';
-            } else if (ch[j] == 'f') {
-                ch[j] = 's';
-            } else if (ch[j] == 'g') {
-                ch[j] = 'f';
-            } else if (ch[j] == 'h') {
-                ch[j] = 'g';
-            } else if (ch[j] == 'j') {
-                ch[j] = 'h';
-            } else if (ch[j] == 'k') {
-                ch[j] = 'j';
+            } else if (ch[j] == 'o') {
+                ch[j] = 'p';
             } else if (ch[j] == 'l') {
+                ch[j] = 'a';
+            } else if (ch[j] == 'a') {
+                ch[j] = 's';
+            } else if (ch[j] == 's') {
+                ch[j] = 'd';
+            } else if (ch[j] == 's') {
+                ch[j] = 'f';
+            } else if (ch[j] == 'f') {
+                ch[j] = 'g';
+            } else if (ch[j] == 'g') {
+                ch[j] = 'h';
+            } else if (ch[j] == 'h') {
+                ch[j] = 'j';
+            } else if (ch[j] == 'j') {
                 ch[j] = 'k';
-            } else if (ch[j] == 'z') {
-                ch[j] = 'm';
-            } else if (ch[j] == 'x') {
-                ch[j] = 'z';
-            } else if (ch[j] == 'c') {
-                ch[j] = 'x';
-            } else if (ch[j] == 'v') {
-                ch[j] = 'c';
-            } else if (ch[j] == 'b') {
-                ch[j] = 'v';
-            } else if (ch[j] == 'n') {
-                ch[j] = 'b';
+            } else if (ch[j] == 'k') {
+                ch[j] = 'l';
             } else if (ch[j] == 'm') {
+                ch[j] = 'z';
+            } else if (ch[j] == 'z') {
+                ch[j] = 'x';
+            } else if (ch[j] == 'x') {
+                ch[j] = 'c';
+            } else if (ch[j] == 'c') {
+                ch[j] = 'v';
+            } else if (ch[j] == 'v') {
+                ch[j] = 'b';
+            } else if (ch[j] == 'b') {
                 ch[j] = 'n';
+            } else if (ch[j] == 'n') {
+                ch[j] = 'm';
             }
         }
 
-        System.out.println("encoding message..." + "\n");
+        System.out.println("decoding message..." + "\n");
         for (int i = 0; i < decodeProcess.length(); i++) {
             System.out.print(ch[i]);
         }
-        System.out.print("\n" + "\n" + "Your message has been encoded");
+        System.out.print("\n" + "\n" + "Your message has been decoded");
 
     }
 
