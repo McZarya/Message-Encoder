@@ -35,6 +35,7 @@ public class MessageEncoder {
             System.out.println("Goodbye");
             System.exit(0);
         }
+        inData.close(); // Closing Scanner
     }
 
     public static void encode() { // Encoded message processing
@@ -106,6 +107,7 @@ public class MessageEncoder {
             } else if (ch[j] == 'm') {
                 ch[j] = 'n';
             }
+
         }
 
         System.out.println("encoding message..." + "\n");
@@ -137,6 +139,7 @@ public class MessageEncoder {
             System.out.println("Goodbye");
             System.exit(0);
         }
+        enInData.close(); // Closing Scanner
     }
 
     public static void decode() { // Decoded message processing
@@ -240,7 +243,7 @@ public class MessageEncoder {
             System.out.println("Goodbye");
             System.exit(0);
         }
-
+        deInData.close(); // Closing Scanner
     }
 
     public static void wait(int ms) {
