@@ -15,9 +15,9 @@ public class MessageEncoder {
 
         Scanner inData = new Scanner(System.in);
 
-        System.out.println("=================================================" + "\n" + "MESSAGE ENCODER BY MCZARYA"
+        System.out.print("=================================================" + "\n" + "MESSAGE ENCODER BY MCZARYA"
                 + "\n" + "=================================================" + "\n" + "What would you like todo:" + "\n"
-                + "1. Encode a message" + "\n" + "2. Decrypt a message" + "\n" + "3. Exit Program");
+                + "1. Encode a message" + "\n" + "2. Decrypt a message" + "\n" + "3. Exit Program" + "\n" + "Input: ");
         mainIn = inData.nextInt(); // gets what the user wants todo
 
         if (mainIn < 1 || mainIn > 3) { // error checking menu options
@@ -43,7 +43,7 @@ public class MessageEncoder {
 
         System.out.println("+-----------------------------+" + "\n" + "        Message Encoder" + "\n"
                 + "+-----------------------------+");
-        System.out.println("\n" + "Enter the message you want to encode:");
+        System.out.print("\n" + "Enter the message you want to encode:");
         String encodeIn = enInData.nextLine();
 
         String encodeProcess = encodeIn.toLowerCase(); // Makes all letters lowercase for processing
@@ -122,8 +122,8 @@ public class MessageEncoder {
         System.out.print("\n" + "+------------------------------+");
         System.out.print("\n" + "Your message has been encoded" + "\n");
 
-        System.out.println("Options: " + "\n" + "1. Encode another message" + "\n" + "2. Decode a message" + "\n"
-                + "3. Exit Program");
+        System.out.print("Options: " + "\n" + "1. Encode another message" + "\n" + "2. Decode a message" + "\n"
+                + "3. Exit Program" + "\n" + "Input: ");
         int returnToMenu = enInData.nextInt();
         if (returnToMenu < 1 || returnToMenu > 3) { // error checking menu options
             System.out.println("Error! You entered an invalid option type.");
@@ -148,7 +148,7 @@ public class MessageEncoder {
         System.out.println("+-----------------------------+" + "\n" + "        Message Decoder" + "\n"
                 + "+-----------------------------+");
 
-        System.out.println("\n" + "Enter the message you want to decode:");
+        System.out.print("\n" + "Enter the message you want to decode:");
         String decodeIn = deInData.nextLine();
 
         String decodeProcess = decodeIn.toLowerCase(); // Makes all letters lowercase for processing
@@ -226,8 +226,8 @@ public class MessageEncoder {
         System.out.print("\n" + "+------------------------------+");
         System.out.print("\n" + "Your message has been decoded" + "\n");
 
-        System.out.println("Options: " + "\n" + "1. Encode a message" + "\n" + "2. Decode another message" + "\n"
-                + "3. Exit Program");
+        System.out.print("Options: " + "\n" + "1. Encode a message" + "\n" + "2. Decode another message" + "\n"
+                + "3. Exit Program" + "\n" + "Input: ");
         int returnToMenu = deInData.nextInt();
         if (returnToMenu < 1 || returnToMenu > 3) { // error checking menu options
             System.out.println("Error! You entered an invalid option type.");
