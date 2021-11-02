@@ -2,8 +2,11 @@ package src.mczarya;
 
 /*
  * MessageEncoder.java built by McZarya on 07/26/2021
+ * A program that will use a user supplied cypher to encode/decode a message 
+ * 
  * Last updated on 07/26/2021
- * A program that will use a user supplied cypher to encrypt/decrypt message 
+ * 
+ * @author McZarya, 2021
 */
 
 import java.util.Scanner; // Package inclusion for scanner class
@@ -17,7 +20,7 @@ public class MessageEncoder {
 
         System.out.print("=================================================" + "\n" + "MESSAGE ENCODER BY MCZARYA"
                 + "\n" + "=================================================" + "\n" + "What would you like todo:" + "\n"
-                + "1. Encode a message" + "\n" + "2. Decrypt a message" + "\n" + "3. Exit Program" + "\n" + "Input: ");
+                + "1. Encode a message" + "\n" + "2. Decode a message" + "\n" + "3. Exit Program" + "\n" + "Input: ");
         mainIn = inData.nextInt(); // gets what the user wants todo
 
         if (mainIn < 1 || mainIn > 3) { // error checking menu options
@@ -110,7 +113,7 @@ public class MessageEncoder {
 
         }
 
-        System.out.println("encoding message..." + "\n");
+        System.out.println("Encoding message..." + "\n");
         wait(2000);
 
         System.out.println("+-------Encoded Message--------+");
@@ -214,10 +217,10 @@ public class MessageEncoder {
             }
         }
 
-        System.out.println("decoding message..." + "\n");
+        System.out.println("Decoding message..." + "\n");
         wait(2000);
 
-        System.out.println("+-------decoded Message--------+");
+        System.out.println("+-------Decoded Message--------+");
 
         System.out.print(" ");
         for (int i = 0; i < decodeProcess.length(); i++) {
